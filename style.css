@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+  --page-bg:#333;
+  --f-color:#b3afbf;
+  --card-bg:#222;
+  --card-shadow:rgba(0,0,0,0.7);
+  --blue:#4158D0;
+  --pink:#C850C0;
+  --yellow:#FFCC70;
+  --btn-color-p:#0093e9;
+  --btn-color-s:#80d0c7;
+  --social-shadow-p:rgba(0,0,0,0.15);
+  --social-shadow-s:rgba(255,255,255,0.1);
+  --social-i-color:#777;
+  --social-h-color-twitter:#00acee;
+  --social-h-color-github:#000;
+  --social-h-color-insta:#f14843;
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  background: var(  --page-bg);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--f-color);
+}
+
+.card{
+  padding: 15px;
+  width: 350px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  text-align: center;
+  user-select: none;
+  box-shadow: 0 10px 15px var(--card-shadow);
+}
+
+.profile-photo{
+  position: relative;
+  background: url('./images/bg.jpg');
+  background-size: cover;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+.profile{
+  position: absolute;
+  width: 120px;
+  bottom: -60px;
+  left: 15px;
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--card-bg);
+  border: 2px solid var(--card-bg);
+}
+
+.profile-name{
+  font-size: 20px;
+  margin: 25px 0 0 120px;
+  padding: 0 0 6px 0;
+  color: #fff;
+  background: linear-gradient(to right, var(--blue) 0% , var(--pink) 46% , var(--yellow) 100%) , linear-gradient(to right, var(--yellow) 0% , var(--pink) 46% , var(--blue) 100%);
+  background-size: 100% 3px , 0 3px;
+  background-position: 100% 100% , 0% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: background-size .5s;
+}
+
+.profile-name:hover{
+  background-size: 0 3px , 100% 3px;
+}
+
+.about{
+  margin-top:30px;
+}
+
+.btn{
+  margin: 30px 15px;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 1px solid var(--btn-color-p);
+  background: linear-gradient( 90deg , var(--btn-color-p) 0% , var(--btn-color-s) 100%);
+  cursor: pointer;
+  color: var(--card-bg);
+
+}
+
+.btn:last-of-type{
+  background: transparent;
+  color: var(--btn-color-p);
+}
+
+.btn:hover{
+  background: linear-gradient(180deg , var(--btn-color-s) 0% , var(--btn-color-p) 100%);
+  color: var(--card-bg);
+}
+
+.social-media{
+  display: flex;
+  justify-content: center;
+  margin: 20px 5px;
+}
+
+.social-media a{
+  display: flex;
+  background: var(--card-bg);
+  margin: 0 12px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  box-shadow: 6px 6px 10px var(--social-shadow-p) , -6px -6px 10px var(--social-shadow-s);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform .5s;
+}
+
+.social-media a i{
+  color: var(--social-i-color);
+  transition: transform .5s;
+}
+
+.social-media a .fa{
+  font-size: 20px;
+}
+
+.social-media a:hover{
+  border: 1px solid var(--social-shadow-p);
+  transform: translateY(2px);
+}
+
+.social-media a:hover i{
+  transform: scale(0.9);
+}
+
+.social-media a:hover .fa-facebook{
+  color: var(--blue);
+}.social-media a:hover .fa-instagram{
+  color: var(--social-h-color-insta);
+}.social-media a:hover .fa-twitter{
+  color: var(--social-h-color-twitter);
+}.social-media a:hover .fa-github{
+  color: var(--social-h-color-github);
+}
